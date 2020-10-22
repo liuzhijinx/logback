@@ -1,3 +1,5 @@
+http://www.logback.cn
+
 # introduction
 
 logback log4j
@@ -81,7 +83,48 @@ Joran
 查看内部状态信息:StatusManager; Web配置。
 监听状态信息:xml; -Dlogback.statusListenerClass
 
+停止logback-classic，web中才用到
 
+## 配置文件语法
+-configuration
+--appender
+--logger
+--root
+
+--logger
+---name
+---level
+---additivity
+
+```<root>```
+
+```<appender_ref>```
+
+```<logger>```
+
+```<appender>``` name class layout encoder filter
+
+```<logger name="" additivity="false>```父级不输出，本级输出。
+
+configuration下的contextName，多个日志输出到同一地方时，多个日志之间区分
+
+变量${}
+scope: local context system
+默认值
+嵌套
+
+动态定义属性
+
+条件
+
+JNDI
+引入文件
+传播级别
+
+----------
+# 4
+
+console file rollingfile
 
 
 
